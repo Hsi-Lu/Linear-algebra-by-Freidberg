@@ -1,0 +1,212 @@
+\documentclass{article}
+\usepackage{xeCJK} % For CJK support
+\usepackage[margin=1in]{geometry} % Set all margins to 1 inch
+\usepackage{parskip}% Add more space
+
+\usepackage{amsmath} % is needed to use the math environments align, aligned, gather, gathered, multline etc.
+\usepackage{amsthm} % For theorem environments
+
+\usepackage{cases} % For \begin{numcases} environment, included after amsmath
+\usepackage{braket} % For \set{} command
+
+\usepackage[hidelinks]{hyperref}
+\newcommand{\0}{\mathit{0}}
+\newcommand{\V}{\mathsf{V}}
+
+
+\begin{document}
+\section{Page 12}
+\textbf{Theorem 1.2}. In any vector space $\V$, the following statements are true:
+
+(a) $0x = \0$ for each $x \in \V$.
+
+(b) $(-a)x = -(ax)=a(-x)$ for each $a \in F$ and each $x \in \V$.
+
+(c) $a\0 = \0$ for each $a \in F$.
+
+The proof of (c) is similar to the proof of (a)
+
+\begin{quotation}
+    \textbf{Theorem 1.1} (Cancellation Law for Vector Addition). If $x$, $y$,
+    and $z$ are vectors in a vector space $\V$ such that $x+z = y +z$,then$x = y$.
+
+    (\textbf{VS 7}) For each element $a$ in $F$ and each pair of elements $x$, $y$ in $\V$,
+    $a(x +y)=ax+ay$. (See page 7)
+\end{quotation}
+
+\begin{proof}
+    By VS 7, we have $a\0+a\0=a(\0+\0)=a\0=a\0+\0$.
+    Then by the cancellation law for vector addition, we have $a\0 = \0$.
+\end{proof}
+
+\section{Thoughts on exercise 1.2.1(c)(d)}
+
+\begin{quotation}
+
+    1. Label the following statements as true or false.
+
+    (c)In any vector space, $ax = bx$ implies that $a = b$.
+
+    (d)In any vector space, $ax = ay$ implies that $x = y$.
+
+    (\textbf{VS 5}) For each element $x$ in $\V$, $1x = x$.
+
+    (\textbf{VS 6}) For each pair of elements $a$, $b$ in $F$ and each element $x$ in $\V$,
+    $(ab)x = a(bx)$.
+
+\end{quotation}
+
+It's obvious that in (c) and (d) above, $0$ and $\0$ is a counterexample respectively. Then:
+
+If $ax=\0\ (a\in F,x\in\V)$, is it possible that $a\neq0$ and $v\neq\0$?
+
+\begin{proof}[Answer]
+    No, it's impossible.
+
+    Since $a$ is an element in field,
+    so there's multiplicative inverse $a^{-1}$ such that $a^{-1} a=1$.
+
+    By VS 6 and VS 5, $a^{-1} (ax)=(a^{-1}a)x=1x=x$, also $a^{-1} (ax)=a^{-1}\0=0$.
+\end{proof}
+
+\section{Thoughts on Exercise 1.3.28}
+Why is the condition "$F$ is not of characteristic $2$" needed?
+
+\begin{quotation}
+    28. A matrix $M$ is called \textit{skew-symmetric} if $M^t = -M$.
+    Clearly, a skew-symmetric matrix is square. Let $F$ be a field. Prove that the set $\mathsf{W}_1$ of all skew-symmetric $n\times n$ matrices with entries from F is a subspace of $\mathsf{M}_{n\times n}(F)$. Now assume that $F$ is not of characteristic 2 (see Ap
+    pendix C), and let $\mathsf{W}_2$ be the subspace of $\mathsf{M}_{n\times n}(F)$ consisting of all
+    symmetric $n\times n$ matrices. Prove that$\mathsf{M}_{n\times n}(F)=\mathsf{W}_1 \oplus \mathsf{W}_2$.
+
+
+    \textbf{Example 4}
+    The field $Z_2$ consists of two elements $0$ and $1$ with the operations of addition
+    and multiplication defined by the equations
+    \begin{gather*}
+        0+0=0,\quad 0+1=1+0=1,\quad1+1=0,\\
+        0\cdot 0=0, \quad 0\cdot 1=1\cdot 0=0, \quad \text{and} \quad1\cdot 1=1
+    \end{gather*}
+
+    In an arbitrary field $F$, it may happen that a sum $1+1+\cdots +1$($p$ sum
+    mands) equals $0$ for some positive integer $p$. For example, in the field $Z_2$
+    (defined in Example 4), $1+1 = 0$. In this case, the smallest positive integer $p$
+    for which a sum of $p$ $1$’s equals $0$ is called the \textbf{characteristic} of $F$; if no such
+    positive integer exists, then F is said to have characteristic zero.Thus $Z_2$
+    has characteristic two, and $R$ has characteristic zero. Observe that if $F$ is a
+    field of characteristic $p=0$,then $x+x+\cdots +x$ ($p$ summands) equals $0$ for all
+    $x \in F$.
+
+\end{quotation}
+
+\begin{proof}
+    The solution mentioned
+    \begin{quotation}
+        $\mathsf{W}_1 \cap\mathsf{W}_2 ={\0}$ holds is because $A+A^t$ is symmetric and $A-A^t$ is skew-symmetric. If $F$ is of characteristic 2, we have
+        $\mathsf{W}_1  =\mathsf{W}_2 $
+    \end{quotation}
+
+    if there's other element $A$ other than $\0$ in $\mathsf{W}_1 \cap\mathsf{W}_2$, then there is non-zero entry $A_{ij}=A_{ji}$ and $A_{ij}=-A_{ji}$, which leads to
+    $A_{ij}+A_{ij}=0$.
+
+    Devide both hands of equity by $A_{ij}$ causes $1+1=0$, which means $F$ is of characteristic $2$”
+\end{proof}
+
+\section{Thoughts on exercise 1.5.13}
+Where is the condition "characteristic not equal to two" used?
+
+\begin{quotation}
+    13. Let $\V$ be a vector space over a field of characteristic
+    not equal to two.
+
+    (a) Let $u$ and $v$ be distinct vectors in $V$. Prove that $\set{u, v}$ is
+    linearly independent if and only if $\set{u + v, u - v}$ is linearly independent.
+
+    (b) Let $u, v,$ and $w$ be distinct vectors in $\V$. Prove that $\set{u, v, w}$
+    is linearly independent if and only if $\set{u + v, u + w, v + w}$ is linearly
+    independent.
+\end{quotation}
+
+Since the proof of (a) and (b) are similar,
+we only show where the characteristic not equal to two is used in the sufficiency case of (a).
+For the rest, the situation is similar.
+
+\begin{proof}
+    If $\set{u+v, u-v}$ is linearly independent, we have
+    $m(u+v) + n(u - v) = \0 \implies m = n = \0$.
+    Assume $xu+yv=0$, then we try to represent $xu+yv$ as linear combination of $u+v$ and $u-v$.
+    Let $a(u+v)+b(u-v)=xu+yv$, then we solve the system of equations:
+    \begin{numcases}{}
+        a + b = x \tag*{(1)}\\
+        a - b = y \tag*{(2)}
+    \end{numcases}
+    By adding (1) and (2), and using distributivity of multiplication over addition
+    we have $\mathit{2}a = x + y$. Note that $\mathit{2}$ here is just a notation of $1+1$ in the field.
+    \textbf{Since field is not of characteristic $2$, $\mathit{2}$ is not equal to $0$.}
+    Then there exists a multiplicative inverse $\mathit{2}^{-1}$ in $F$.
+    So by multiplying $\mathit{2}^-1$ on both side,
+    we have $a = \frac{x+y}{\mathit{2}}$ and $b = \frac{x-y}{\mathit{2}}$.
+    Thus we have
+    \begin{align*}
+        xu+yv & =a(u+v)+b(u-v)
+              & =\frac{x+y}{\mathit{2}}(u+v)+\frac{x-y}{\mathit{2}} \\
+    \end{align*}
+    By the linear independence of $\set{u+v, u-v}$, we have
+    \begin{numcases}{}
+        \frac{x+y}{\mathit{2}} = 0 \tag*{(3)}\\
+        \frac{x-y}{\mathit{2}} = 0 \tag*{(4)}
+    \end{numcases}
+    Similarly, thanks to field's characteristic is not equal to two,
+    we can first multiply $\mathit{2}$ on both side of (3) and (4),
+    then we can add (3) and (4) to get $x = 0$ and $y = 0$.
+\end{proof}
+
+\section{Note exercise 1.5.15}
+\begin{quotation}
+    15. Let $S = \set{u_1, u_2, \dots, u_n}$ be a finite set of vectors.
+    Prove that $S$ is linearly dependent if and only if $u_1 = 0$ or
+    $u_{k+1} \in \operatorname{span}(\set{u_1, u_2, \dots, u_k})$ for some
+    $k$ such that $1 \leq k < n$.
+\end{quotation}
+
+The wording of the exercise is not so clear.
+I think for the "$\implies$" part, it should be
+\begin{quote}
+    If $S = \set{u_1, u_2, \dots, u_n}$ is a linearly dependent set, then
+    $\exists k$ satisfying $1 \leq k < n$ such that
+    $u_{k+1} \in \operatorname{span}(\set{u_1, u_2, \dots, u_{k-1}})$.
+\end{quote}
+Note it's $\exists k$ rather than $\forall k$.
+
+If it's $\forall k$, then the statement is not true. For example,
+let $S$ be ${u_1,u_2,u_3}$, where
+$u_1=(1,0)$,$u_2=(2,0)$ and $u_3=(0,1)$.
+Clearly $S$ is linearly independent, but $u_3$ is not in the span of $\set{u_1,u_2}$.
+
+Besides, I don't think the proof of "$\implies$" in the solution book is clear.
+
+The following only shows the "$\implies$" part,
+since the "$\impliedby$"
+is simple and clearly showed in the solution book.
+
+\begin{quotation}
+    \textbf{Theorem 1.7.} Let $S$ be a linearly independent subset of a vector space
+    $V$, and let $v$ be a vector in $V$ that is not in $S$. Then $S \cup \set{v}$
+    is linearly dependent if and only if $v \in \operatorname{span}(S)$.
+\end{quotation}
+
+\begin{proof}
+    Let induct on $n$.
+
+    For $n=1$, we have $S=\set{u_1}$. If $S$ is linearly dependent, $u_1$ have to be $\0$.
+
+    If the statement is true for $n$, we show it is also true for $n+1$.
+    Since $\set{u_1,u_2,\dots,u_{n+1}}=\set{u_1,u_2,\dots,u_n}\cup\set{u_{n+1}}$
+    If $\set{u_1,u_2,\dots,u_n}$ is linearly dependent, then by induction hypothesis,
+    it's already true.
+    If $\set{u_1,u_2,\dots,u_n}$ is linearly independent, then by Theorem 1.7, we get
+    $u_n\in\operatorname{span}(\set{u_1,u_2,\dots,u_n})$
+
+    Then finish the proof by induction.
+\end{proof}
+
+\end{document}
