@@ -4,7 +4,23 @@
 \usepackage{parskip}% Add more space
 
 \usepackage{amsmath} % is needed to use the math environments align, aligned, gather, gathered, multline etc.
+\usepackage{amsfonts} % For math fonts
 \usepackage{amsthm} % For theorem environments
+% The "plain" theorem style is used for fundamental mathematical results.
+% It formats the title in bold and the theorem body in italics.
+\theoremstyle{plain}
+\newtheorem*{theorem}{Theorem}       % Theorem: A general mathematical statement with a proof.
+\newtheorem*{lemma}{Lemma}           % Lemma: A supporting result used in proving theorems.
+\newtheorem*{proposition}{Proposition} % Proposition: A less fundamental theorem, but still an important statement.
+% The "definition" theorem style is used for explanatory content.
+% It formats the title in bold and the body text in normal (Roman) font.
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition} % Definition: A precise explanation of a mathematical concept.
+\newtheorem*{example}{Example}       % Example: A specific instance illustrating a concept.
+% The "remark" theorem style is used for informal observations or comments.
+% It formats the title in italics and the body text in normal (Roman) font.
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark} 
 
 \usepackage{cases} % For \begin{numcases} environment, included after amsmath
 \usepackage{braket} % For \set{} command
@@ -208,5 +224,46 @@ is simple and clearly showed in the solution book.
 
     Then finish the proof by induction.
 \end{proof}
+
+\section{Takeaway}
+\begin{definition}
+    Let $\mathsf{V}$ be a vector space and $\set{S}$ a nonempty subset of
+    $\mathsf{V}$. A vector $v \in \mathsf{V}$ is called a \textbf{linear combination}
+    of vectors of $\set{S}$ if there exist a finite number of vectors
+    $u_1, u_2, \dots, u_n$ in $\set{S}$ and scalars $a_1, a_2, \dots, a_n$
+    in $F$ such that
+    \[
+        v = a_1 u_1 + a_2 u_2 + \dots + a_n u_n.
+    \]
+    In this case, we also say that $v$ is a linear combination of
+    $u_1, u_2, \dots, u_n$ and call $a_1, a_2, \dots, a_n$ the \textbf{coefficients}
+    of the linear combination.
+\end{definition}
+
+\begin{definition}
+    A subset $\set{S}$ of a vector space $\mathsf{V}$ is called \textbf{linearly
+    dependent} if there exist a finite number of distinct vectors
+    $u_1, u_2, \dots, u_n$ in $\set{S}$ and scalars $a_1, a_2, \dots, a_n$,
+    not all zero, such that
+    \[
+        a_1 u_1 + a_2 u_2 + \dots + a_n u_n = \0.
+    \]
+    In this case, we also say that the vectors of $\set{S}$ are linearly dependent.
+\end{definition}
+
+\begin{definition}
+    A subset $\set{S}$ of a vector space $\mathsf{V}$ that is not linearly
+    dependent is called \textbf{linearly independent}.
+
+    As before, we also say that the vectors of $\set{S}$ are linearly independent.
+\end{definition}
+
+\begin{definition}
+    A \textbf{basis} $\beta$ for a vector space $\mathsf{V}$ is a linearly independent
+    subset of $\mathsf{V}$ that generates $\mathsf{V}$.
+
+    If $\beta$ is a basis for $\mathsf{V}$, we also say that the vectors of
+    $\beta$ form a basis for $\mathsf{V}$.
+\end{definition}
 
 \end{document}
