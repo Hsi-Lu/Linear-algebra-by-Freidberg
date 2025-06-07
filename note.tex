@@ -465,4 +465,52 @@ If $\beta = \set{v_1, v_2, \dots, v_n}$ is a basis for $\mathsf{V}$, then
 \mathsf{R}(T) = \mathrm{span}(T(\beta)) = \mathrm{span}(\set{T(v_1), T(v_2), \dots, T(v_n)}).
 \]
 
+\medskip
+
+\textbf{Definitions.} Let $\mathsf{V}$ and $\mathsf{W}$ be vector spaces, and let 
+$T: \mathsf{V} \to \mathsf{W}$ be linear. 
+If $\mathsf{N}(T)$ and $\mathsf{R}(T)$ are finite-dimensional, then we define the 
+\textbf{nullity} of $T$, denoted $\mathrm{nullity}(T)$, and the \textbf{rank} of $T$, 
+denoted $\mathrm{rank}(T)$, to be the dimensions of $\mathsf{N}(T)$ and $\mathsf{R}(T)$, respectively.
+
+\medskip
+
+\textbf{Theorem 2.3 (Dimension Theorem).} Let $\mathsf{V}$ and $\mathsf{W}$ be vector spaces, 
+and let $T: \mathsf{V} \to \mathsf{W}$ be linear. 
+If $\mathsf{V}$ is finite-dimensional, then
+\[
+\mathrm{nullity}(T) + \mathrm{rank}(T) = \dim(\mathsf{V}).
+\]
+
+\medskip
+
+\textbf{Theorem 2.4.} Let $\mathsf{V}$ and $\mathsf{W}$ be vector spaces, and let 
+$T: \mathsf{V} \to \mathsf{W}$ be linear. 
+Then $T$ is one-to-one if and only if $\mathsf{N}(T) = \set{\0}$.
+
+\medskip
+
+\textbf{Theorem 2.5.} Let $\mathsf{V}$ and $\mathsf{W}$ be vector spaces of equal (finite) 
+dimension, and let $T: \mathsf{V} \to \mathsf{W}$ be linear. Then the following are equivalent:
+
+(a) $T$ is one-to-one.
+
+(b) $T$ is onto.
+
+(c) $\mathrm{rank}(T) = \dim(\mathsf{V})$.
+
+\medskip
+
+\textbf{Theorem 2.6.} Let $\mathsf{V}$ and $\mathsf{W}$ be vector spaces over $F$, and suppose that 
+$\set{v_1, v_2, \dots, v_n}$ is a basis for $\mathsf{V}$. 
+For $w_1, w_2, \dots, w_n$ in $\mathsf{W}$, there exists exactly one linear transformation 
+$T: \mathsf{V} \to \mathsf{W}$ such that $T(v_i) = w_i$ for $i = 1, 2, \dots, n$.
+
+\medskip
+
+\textbf{Corollary.} Let $\mathsf{V}$ and $\mathsf{W}$ be vector spaces, and suppose that 
+$\mathsf{V}$ has a finite basis $\set{v_1, v_2, \dots, v_n}$. 
+If $U, T: \mathsf{V} \to \mathsf{W}$ are linear and $U(v_i) = T(v_i)$ for 
+$i = 1, 2, \dots, n$, then $U = T$.
+
 \end{document}
