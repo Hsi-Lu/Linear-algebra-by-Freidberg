@@ -7,6 +7,11 @@
 \usepackage{amsfonts} % For math fonts like \mathbb{R}
 \usepackage{amsthm} % For theorem environments
 
+\usepackage{graphicx}
+\graphicspath{ {./Media/} }
+\usepackage{caption} % For captions in figures and tables
+
+
 \usepackage{cases} % For \begin{numcases} environment, included after amsmath
 \usepackage{braket} % For \set{} command
 
@@ -263,6 +268,71 @@ definition of finite and infinite dimension vector space, but not showing that e
 space has a basis, although the name of infinite dimension vector space implies that
 there exists a basis for it. In my opinion, the proof should use the statement in section 1.7.
 
+
+
+\section{Exercise 2.4.20}
+
+\textbf{Exercise 2.20.} Let $T: \mathsf{V} \to \mathsf{W}$ be a linear transformation from an
+$n$-dimensional vector space $\mathsf{V}$ to an $m$-dimensional vector space $\mathsf{W}$.
+Let $\beta$ and $\gamma$ be ordered bases for $\mathsf{V}$ and $\mathsf{W}$, respectively.
+Let $A = \left[ T \right]^\gamma_\beta$. Prove that
+\(
+\mathrm{rank}(T) = \mathrm{rank}(L_A)\)
+and
+\(
+\mathrm{nullity}(T) = \mathrm{nullity}(L_A),
+\)
+where $L_A$ is the matrix transformation defined by $L_A(x) = Ax$.
+\textit{Hint:} Apply Exercise 2.17 to Figure 2.2.
+
+\begin{quotation}
+    \textbf{Exercise 2.4.17.} Let $\mathsf{V}$ and $\mathsf{W}$ be finite-dimensional vector spaces,
+    and let $T: \mathsf{V} \to \mathsf{W}$ be an isomorphism. Let $\mathsf{V}_0$ be a subspace of $\mathsf{V}$.
+    (a) Show that $T(\mathsf{V}_0)$ is a subspace of $\mathsf{W}$.
+    (b) Show that $\dim(\mathsf{V}_0) = \dim(T(\mathsf{V}_0))$.
+
+    \textbf{Theorem 2.14.} Let $\mathsf{V}$ and $\mathsf{W}$ be finite-dimensional vector spaces
+    having ordered bases $\beta$ and $\gamma$, respectively, and let
+    $T: \mathsf{V} \to \mathsf{W}$ be linear.
+    Then, for each $u \in \mathsf{V}$, we have
+    \[
+        \left[ T(u) \right]_\gamma = \left[ T \right]^\gamma_\beta \left[ u \right]_\beta.
+    \]
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[scale=1]{{Figure 2.2.pdf}}
+        \captionsetup{labelformat=empty}
+        \caption*{Figure 2.2}
+    \end{figure}
+
+    By a simple reformulation of Theorem 2.14 (p.~91), we may conclude that
+    \[
+        L_A  \phi_\beta = \phi_\gamma  T
+    \]
+\end{quotation}
+
+\begin{proof}
+    We use a lemma instead of hint to prove this.
+
+    \begin{quotation}
+        \textbf{Lemma.} Let T be a linear transformation and $\phi_1, \phi_2$ be isomorphisms,
+        Then $\textrm{rank}(\phi_1T)=\textrm{rank}(T)$, $\textrm{rank}(T\phi_2)=\textrm{rank}(T)$ and
+        $\textrm{nullity}(\phi_1T)=\textrm{nullity}(T)$, $\textrm{nullity}(T\phi_2)=\textrm{nullity}(T)$.
+        
+        \smallskip
+        
+        It's obvious for the rank part.
+        For the nullity part,
+        We have $\phi_1Tx$ is $\0$ iff $\phi_1x$ is in $N(T)$, since $\phi_1^{-1}$ is also an isomorphism,
+        by conclusion of exercise 2.4.17, $\mathrm{dim}(\phi_1^{-1}(N(T)))=\mathrm{dim}(N(T))$. So
+        $\mathrm{nullity}(\phi_1T)=\mathrm{nullity}(T)$.
+        For $\textrm{nullity}(T\phi_2)=\textrm{nullity}(T)$, $T\phi_2x=\0$ iff $Tx=\0$, which impiles the conclusion.
+    \end{quotation}
+
+    As $L_A  \phi_\beta = \phi_\gamma  T$, exercise 2.4.20 is easily proved.
+\end{proof}
+
 \newpage
 
 \section{Takeaway}
@@ -427,70 +497,70 @@ for all $x, y \in \mathsf{V}$ and $c \in F$, we have:
 
 \medskip
 
-\textbf{Definition.} For vector spaces $\mathsf{V}$ and $\mathsf{W}$ over $F$, we define the 
-\textbf{identity transformation} $\mathsf{I_V}: \mathsf{V} \to \mathsf{V}$ 
-by $\mathsf{I_V}(x) = x$ for all $x \in \mathsf{V}$, 
-and the \textbf{zero transformation} $\mathsf{T_0}: \mathsf{V} \to \mathsf{W}$ 
-by $\mathsf{T_0}(x) = \0$ for all $x \in \mathsf{V}$. 
+\textbf{Definition.} For vector spaces $\mathsf{V}$ and $\mathsf{W}$ over $F$, we define the
+\textbf{identity transformation} $\mathsf{I_V}: \mathsf{V} \to \mathsf{V}$
+by $\mathsf{I_V}(x) = x$ for all $x \in \mathsf{V}$,
+and the \textbf{zero transformation} $\mathsf{T_0}: \mathsf{V} \to \mathsf{W}$
+by $\mathsf{T_0}(x) = \0$ for all $x \in \mathsf{V}$.
 
 \textsl{It is clear that both of these transformations are linear.}
 
 \medskip
 
-\textbf{Definitions.} Let $\mathsf{V}$ and $\mathsf{W}$ be vector spaces, and let 
-$T: \mathsf{V} \to \mathsf{W}$ be linear. 
+\textbf{Definitions.} Let $\mathsf{V}$ and $\mathsf{W}$ be vector spaces, and let
+$T: \mathsf{V} \to \mathsf{W}$ be linear.
 
-We define the \textbf{null space} (or \textbf{kernel}) $\mathsf{N}(T)$ of $T$ to be the set of all vectors 
-$x$ in $\mathsf{V}$ such that $T(x) = \0$; that is, 
-$\mathsf{N}(T) = \set{x \in \mathsf{V} \mid T(x) = \0}$. 
+We define the \textbf{null space} (or \textbf{kernel}) $\mathsf{N}(T)$ of $T$ to be the set of all vectors
+$x$ in $\mathsf{V}$ such that $T(x) = \0$; that is,
+$\mathsf{N}(T) = \set{x \in \mathsf{V} \mid T(x) = \0}$.
 
-We define the \textbf{range} (or \textbf{image}) $\mathsf{R}(T)$ of $T$ to be the subset of $\mathsf{W}$ 
-consisting of all images (under $T$) of vectors in $\mathsf{V}$; that is, 
+We define the \textbf{range} (or \textbf{image}) $\mathsf{R}(T)$ of $T$ to be the subset of $\mathsf{W}$
+consisting of all images (under $T$) of vectors in $\mathsf{V}$; that is,
 $\mathsf{R}(T) = \set{T(x) \mid x \in \mathsf{V}}$.
 
 \medskip
 
-\textbf{Theorem 2.1.} Let $\mathsf{V}$ and $\mathsf{W}$ be vector spaces, and let 
-$T: \mathsf{V} \to \mathsf{W}$ be linear. 
+\textbf{Theorem 2.1.} Let $\mathsf{V}$ and $\mathsf{W}$ be vector spaces, and let
+$T: \mathsf{V} \to \mathsf{W}$ be linear.
 
 Then $\mathsf{N}(T)$ and $\mathsf{R}(T)$ are subspaces of $\mathsf{V}$ and $\mathsf{W}$, respectively.
 
 \medskip
 
-\textbf{Theorem 2.2.} Let $\mathsf{V}$ and $\mathsf{W}$ be vector spaces, and let 
-$T: \mathsf{V} \to \mathsf{W}$ be linear. 
+\textbf{Theorem 2.2.} Let $\mathsf{V}$ and $\mathsf{W}$ be vector spaces, and let
+$T: \mathsf{V} \to \mathsf{W}$ be linear.
 
 If $\beta = \set{v_1, v_2, \dots, v_n}$ is a basis for $\mathsf{V}$, then
 \[
-\mathsf{R}(T) = \mathrm{span}(T(\beta)) = \mathrm{span}(\set{T(v_1), T(v_2), \dots, T(v_n)}).
+    \mathsf{R}(T) = \mathrm{span}(T(\beta)) = \mathrm{span}(\set{T(v_1), T(v_2), \dots, T(v_n)}).
 \]
 
 \medskip
 
-\textbf{Definitions.} Let $\mathsf{V}$ and $\mathsf{W}$ be vector spaces, and let 
-$T: \mathsf{V} \to \mathsf{W}$ be linear. 
-If $\mathsf{N}(T)$ and $\mathsf{R}(T)$ are finite-dimensional, then we define the 
-\textbf{nullity} of $T$, denoted $\mathrm{nullity}(T)$, and the \textbf{rank} of $T$, 
+\textbf{Definitions.} Let $\mathsf{V}$ and $\mathsf{W}$ be vector spaces, and let
+$T: \mathsf{V} \to \mathsf{W}$ be linear.
+If $\mathsf{N}(T)$ and $\mathsf{R}(T)$ are finite-dimensional, then we define the
+\textbf{nullity} of $T$, denoted $\mathrm{nullity}(T)$, and the \textbf{rank} of $T$,
 denoted $\mathrm{rank}(T)$, to be the dimensions of $\mathsf{N}(T)$ and $\mathsf{R}(T)$, respectively.
 
 \medskip
 
-\textbf{Theorem 2.3 (Dimension Theorem).} Let $\mathsf{V}$ and $\mathsf{W}$ be vector spaces, 
-and let $T: \mathsf{V} \to \mathsf{W}$ be linear. 
+\textbf{Theorem 2.3 (Dimension Theorem).} Let $\mathsf{V}$ and $\mathsf{W}$ be vector spaces,
+and let $T: \mathsf{V} \to \mathsf{W}$ be linear.
 If $\mathsf{V}$ is finite-dimensional, then
 \[
-\mathrm{nullity}(T) + \mathrm{rank}(T) = \dim(\mathsf{V}).
+    \mathrm{nullity}(T) + \mathrm{rank}(T) = \dim(\mathsf{V}).
 \]
 
 \medskip
 
-\textbf{Theorem 2.4.} Let $\mathsf{V}$ and $\mathsf{W}$ be vector spaces, and let 
-$T: \mathsf{V} \to \mathsf{W}$ be linear. 
+\textbf{Theorem 2.4.} Let $\mathsf{V}$ and $\mathsf{W}$ be vector spaces, and let
+$T: \mathsf{V} \to \mathsf{W}$ be linear.
 Then $T$ is one-to-one if and only if $\mathsf{N}(T) = \set{\0}$.
 
 \medskip
 
-\textbf{Theorem 2.5.} Let $\mathsf{V}$ and $\mathsf{W}$ be vector spaces of equal (finite) 
+\textbf{Theorem 2.5.} Let $\mathsf{V}$ and $\mathsf{W}$ be vector spaces of equal (finite)
 dimension, and let $T: \mathsf{V} \to \mathsf{W}$ be linear. Then the following are equivalent:
 
 (a) $T$ is one-to-one.
@@ -501,33 +571,33 @@ dimension, and let $T: \mathsf{V} \to \mathsf{W}$ be linear. Then the following 
 
 \medskip
 
-\textbf{Theorem 2.6.} Let $\mathsf{V}$ and $\mathsf{W}$ be vector spaces over $F$, and suppose that 
-$\set{v_1, v_2, \dots, v_n}$ is a basis for $\mathsf{V}$. 
-For $w_1, w_2, \dots, w_n$ in $\mathsf{W}$, there exists exactly one linear transformation 
+\textbf{Theorem 2.6.} Let $\mathsf{V}$ and $\mathsf{W}$ be vector spaces over $F$, and suppose that
+$\set{v_1, v_2, \dots, v_n}$ is a basis for $\mathsf{V}$.
+For $w_1, w_2, \dots, w_n$ in $\mathsf{W}$, there exists exactly one linear transformation
 $T: \mathsf{V} \to \mathsf{W}$ such that $T(v_i) = w_i$ for $i = 1, 2, \dots, n$.
 
 \medskip
 
-\textbf{Corollary.} Let $\mathsf{V}$ and $\mathsf{W}$ be vector spaces, and suppose that 
-$\mathsf{V}$ has a finite basis $\set{v_1, v_2, \dots, v_n}$. 
-If $U, T: \mathsf{V} \to \mathsf{W}$ are linear and $U(v_i) = T(v_i)$ for 
+\textbf{Corollary.} Let $\mathsf{V}$ and $\mathsf{W}$ be vector spaces, and suppose that
+$\mathsf{V}$ has a finite basis $\set{v_1, v_2, \dots, v_n}$.
+If $U, T: \mathsf{V} \to \mathsf{W}$ are linear and $U(v_i) = T(v_i)$ for
 $i = 1, 2, \dots, n$, then $U = T$.
 
 \medskip
 
-\textbf{Theorem 2.7.} Let $\mathsf{V}$ and $\mathsf{W}$ be vector spaces over a field $F$, 
-and let $T, U: \mathsf{V} \to \mathsf{W}$ be linear. 
+\textbf{Theorem 2.7.} Let $\mathsf{V}$ and $\mathsf{W}$ be vector spaces over a field $F$,
+and let $T, U: \mathsf{V} \to \mathsf{W}$ be linear.
 
-(a) For all $a \in F$, $aT + U$ is linear. 
+(a) For all $a \in F$, $aT + U$ is linear.
 
-(b) Using the operations of addition and scalar multiplication in the preceding 
-definition, the collection of all linear transformations from $\mathsf{V}$ to 
+(b) Using the operations of addition and scalar multiplication in the preceding
+definition, the collection of all linear transformations from $\mathsf{V}$ to
 $\mathsf{W}$ is a vector space over $F$.
 
 \medskip
 
-\textbf{Theorem 2.8.} Let $\mathsf{V}$ and $\mathsf{W}$ be finite-dimensional vector spaces 
-with ordered bases $\beta$ and $\gamma$, respectively, and let $T, U: \mathsf{V} \to \mathsf{W}$ 
+\textbf{Theorem 2.8.} Let $\mathsf{V}$ and $\mathsf{W}$ be finite-dimensional vector spaces
+with ordered bases $\beta$ and $\gamma$, respectively, and let $T, U: \mathsf{V} \to \mathsf{W}$
 be linear transformations. Then
 
 (a) $\left[ T + U \right]^\gamma_\beta = \left[ T \right]^\gamma_\beta + \left[ U \right]^\gamma_\beta$
@@ -536,17 +606,17 @@ be linear transformations. Then
 
 \medskip
 
-\textbf{Theorem 2.17.} Let $\mathsf{V}$ and $\mathsf{W}$ be vector spaces, and let 
-$T: \mathsf{V} \to \mathsf{W}$ be linear and invertible. 
+\textbf{Theorem 2.17.} Let $\mathsf{V}$ and $\mathsf{W}$ be vector spaces, and let
+$T: \mathsf{V} \to \mathsf{W}$ be linear and invertible.
 Then $T^{-1}: \mathsf{W} \to \mathsf{V}$ is linear.
 
 \medskip
 
-\textbf{Theorem 2.18.} Let $\mathsf{V}$ and $\mathsf{W}$ be finite-dimensional vector spaces 
-with ordered bases $\beta$ and $\gamma$, respectively. Let 
-$T: \mathsf{V} \to \mathsf{W}$ be linear. 
-Then $T$ is invertible if and only if $\left[ T \right]^\gamma_\beta$ is invertible. 
-Furthermore, 
+\textbf{Theorem 2.18.} Let $\mathsf{V}$ and $\mathsf{W}$ be finite-dimensional vector spaces
+with ordered bases $\beta$ and $\gamma$, respectively. Let
+$T: \mathsf{V} \to \mathsf{W}$ be linear.
+Then $T$ is invertible if and only if $\left[ T \right]^\gamma_\beta$ is invertible.
+Furthermore,
 \(
 \left[ T^{-1} \right]^\beta_\gamma = \left( \left[ T \right]^\gamma_\beta \right)^{-1}.
 \)

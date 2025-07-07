@@ -1,5 +1,6 @@
 #exclude the generated pdf
 Note.pdf
+TikZ/*.pdf
 
 # The gitignore file is from 
 # https://github.com/github/gitignore/blob/2689587a806c20c56f5784a1111a87474191a89f/TeX.gitignore
