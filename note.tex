@@ -319,9 +319,9 @@ where $L_A$ is the matrix transformation defined by $L_A(x) = Ax$.
         \textbf{Lemma.} Let T be a linear transformation and $\phi_1, \phi_2$ be isomorphisms,
         Then $\textrm{rank}(\phi_1T)=\textrm{rank}(T)$, $\textrm{rank}(T\phi_2)=\textrm{rank}(T)$ and
         $\textrm{nullity}(\phi_1T)=\textrm{nullity}(T)$, $\textrm{nullity}(T\phi_2)=\textrm{nullity}(T)$.
-        
+
         \smallskip
-        
+
         It's obvious for the rank part.
         For the nullity part,
         We have $\phi_1Tx$ is $\0$ iff $\phi_1x$ is in $N(T)$, since $\phi_1^{-1}$ is also an isomorphism,
@@ -331,6 +331,32 @@ where $L_A$ is the matrix transformation defined by $L_A(x) = Ax$.
     \end{quotation}
 
     As $L_A  \phi_\beta = \phi_\gamma  T$, exercise 2.4.20 is easily proved.
+\end{proof}
+
+\section{Exercise 2.5.13}
+Although the solution book provides a proof, I want to note a more natural way to prove it.
+
+\begin{quotation}
+    \textbf{Exercise 2.5.13.} Let $\mathsf{V}$ be a finite-dimensional vector space over a field $F$, and let
+    $\beta = \{x_1, x_2, \dots, x_n\}$ be an ordered basis for $\mathsf{V}$. Let $Q$ be an $n \times n$
+    invertible matrix with entries from $F$. Define
+    \[
+        x'_j = \sum_{i=1}^{n} Q_{ij} x_i \quad \text{for } 1 \leq j \leq n,
+    \]
+    and set $\beta' = \{x'_1, x'_2, \dots, x'_n\}$.
+    Then $\beta'$ is a basis for $\mathsf{V}$, and $Q$ is the change-of-coordinate matrix
+    that converts $\beta'$-coordinates into $\beta$-coordinates.
+\end{quotation}
+
+\begin{proof}
+    We consider matrix $Q$ to represent a linear transformation $T_Q$ from $\mathbb{F}^n$ to
+    $\mathsf{V}$. Then $T_Q$ transforms each $e_j$ to $\sum_{i=1}^{n} Q_{ij} x_i=x_j'$
+    respectively, where $e_j$ is the $j$-th standard basis vector in $\mathbb{F}^n$.
+
+    Since $Q$ is invertible, $T_Q$ is an isomorphism, which means $\mathrm{rank}(T_Q) = n$.
+    So $\sum_{i=1}^{n} Q_{ij} x_i=x_j'$ for $j$ from $1$ to $n$ is a basis for $\mathsf{V}$.
+
+    Then the fact of $Q$ is change-of-coordinate matrix is obvious.
 \end{proof}
 
 \newpage
@@ -606,22 +632,22 @@ be linear transformations. Then
 
 \medskip
 
-\textbf{Theorem 2.11.} Let $\mathsf{V}, \mathsf{W},$ and $\mathsf{Z}$ be finite-dimensional vector spaces 
-with ordered bases $\alpha, \beta,$ and $\gamma$, respectively. Let 
-$T: \mathsf{V} \to \mathsf{W}$ and $U: \mathsf{W} \to \mathsf{Z}$ be linear transformations. 
+\textbf{Theorem 2.11.} Let $\mathsf{V}, \mathsf{W},$ and $\mathsf{Z}$ be finite-dimensional vector spaces
+with ordered bases $\alpha, \beta,$ and $\gamma$, respectively. Let
+$T: \mathsf{V} \to \mathsf{W}$ and $U: \mathsf{W} \to \mathsf{Z}$ be linear transformations.
 Then
 \[
-\left[ UT \right]^\gamma_\alpha = \left[ U \right]^\gamma_\beta \left[ T \right]^\beta_\alpha.
+    \left[ UT \right]^\gamma_\alpha = \left[ U \right]^\gamma_\beta \left[ T \right]^\beta_\alpha.
 \]
 
 \medskip
 
-\textbf{Theorem 2.14.} Let $\mathsf{V}$ and $\mathsf{W}$ be finite-dimensional vector spaces 
-having ordered bases $\beta$ and $\gamma$, respectively, and let 
-$T: \mathsf{V} \to \mathsf{W}$ be linear. 
+\textbf{Theorem 2.14.} Let $\mathsf{V}$ and $\mathsf{W}$ be finite-dimensional vector spaces
+having ordered bases $\beta$ and $\gamma$, respectively, and let
+$T: \mathsf{V} \to \mathsf{W}$ be linear.
 Then, for each $u \in \mathsf{V}$, we have
 \[
-\left[ T(u) \right]_\gamma = \left[ T \right]^\gamma_\beta \left[ u \right]_\beta.
+    \left[ T(u) \right]_\gamma = \left[ T \right]^\gamma_\beta \left[ u \right]_\beta.
 \]
 
 \medskip
@@ -643,26 +669,26 @@ Furthermore,
 
 \medskip
 
-\textbf{Definitions.} Let $\mathsf{V}$ and $\mathsf{W}$ be vector spaces. 
-We say that $\mathsf{V}$ is \textbf{isomorphic} to $\mathsf{W}$ if there exists a linear transformation 
-$T: \mathsf{V} \to \mathsf{W}$ that is invertible. Such a linear transformation is called an 
+\textbf{Definitions.} Let $\mathsf{V}$ and $\mathsf{W}$ be vector spaces.
+We say that $\mathsf{V}$ is \textbf{isomorphic} to $\mathsf{W}$ if there exists a linear transformation
+$T: \mathsf{V} \to \mathsf{W}$ that is invertible. Such a linear transformation is called an
 \textbf{isomorphism} from $\mathsf{V}$ onto $\mathsf{W}$.
 
 \medskip
 
-\textbf{Theorem 2.19.} Let $\mathsf{V}$ and $\mathsf{W}$ be finite-dimensional vector spaces 
-over the same field. Then $\mathsf{V}$ is isomorphic to $\mathsf{W}$ if and only if 
+\textbf{Theorem 2.19.} Let $\mathsf{V}$ and $\mathsf{W}$ be finite-dimensional vector spaces
+over the same field. Then $\mathsf{V}$ is isomorphic to $\mathsf{W}$ if and only if
 \(
 \dim(\mathsf{V}) = \dim(\mathsf{W}).
 \)
 
 \medskip
 
-\textbf{Theorem 2.20.} Let $\mathsf{V}$ and $\mathsf{W}$ be finite-dimensional vector spaces 
-over a field $F$ of dimensions $n$ and $m$, respectively, and let $\beta$ and $\gamma$ 
-be ordered bases for $\mathsf{V}$ and $\mathsf{W}$, respectively. 
+\textbf{Theorem 2.20.} Let $\mathsf{V}$ and $\mathsf{W}$ be finite-dimensional vector spaces
+over a field $F$ of dimensions $n$ and $m$, respectively, and let $\beta$ and $\gamma$
+be ordered bases for $\mathsf{V}$ and $\mathsf{W}$, respectively.
 
-Then the function 
+Then the function
 \(
 \Phi: \mathcal{L}(\mathsf{V}, \mathsf{W}) \to \mathsf{M}_{m \times n}(F)
 \)
@@ -674,7 +700,7 @@ is an isomorphism.
 
 \medskip
 
-\textbf{Theorem 2.22.} Let $\beta$ and $\beta'$ be two ordered bases for a finite-dimensional 
+\textbf{Theorem 2.22.} Let $\beta$ and $\beta'$ be two ordered bases for a finite-dimensional
 vector space $\mathsf{V}$, and let $Q = \left[ I_{\mathsf{V}} \right]^\beta_{\beta'}$. Then:
 
 (a) $Q$ is invertible.
@@ -684,5 +710,15 @@ vector space $\mathsf{V}$, and let $Q = \left[ I_{\mathsf{V}} \right]^\beta_{\be
 \left[ v \right]_\beta = Q \left[ v \right]_{\beta'}.
 \)
 
+\medskip
+
+\textbf{Theorem 2.23.} Let $T$ be a linear operator on a finite-dimensional vector
+space $\mathsf{V}$, and let $\beta$ and $\beta'$ be ordered bases for $\mathsf{V}$.
+
+Suppose that $Q$ is the change-of-coordinate matrix that converts
+$\beta'$-coordinates into $\beta$-coordinates. Then
+\[
+    \left[ T \right]_{\beta'} = Q^{-1} \left[ T \right]_{\beta} Q.
+\]
 
 \end{document}
