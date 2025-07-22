@@ -721,4 +721,41 @@ $\beta'$-coordinates into $\beta$-coordinates. Then
     \left[ T \right]_{\beta'} = Q^{-1} \left[ T \right]_{\beta} Q.
 \]
 
+
+\medskip
+
+\textbf{Definition.} For a vector space $\mathsf{V}$ over a field $F$, we define the 
+\textbf{dual space} of $\mathsf{V}$ to be the vector space $\mathcal{L}(\mathsf{V}, F)$, 
+denoted by $\mathsf{V}^*$.
+
+\medskip
+
+\textbf{Theorem 2.24.} Suppose that $\mathsf{V}$ is a finite-dimensional vector space with 
+ordered basis $\beta = \{x_1, x_2, \dots, x_n\}$. Let $\mathsf{f}_i$ (for $1 \leq i \leq n$) be the 
+$i$th coordinate function with respect to $\beta$ as just defined, and let 
+$\beta^* = \{\mathsf{f}_1, \mathsf{f}_2, \dots, \mathsf{f}_n\}$. 
+Then $\beta^*$ is an ordered basis for the dual space $\mathsf{V}^*$, and for any 
+$\mathsf{f} \in \mathsf{V}^*$, we have
+\[
+\mathsf{f} = \sum_{i=1}^{n} \mathsf{f}(x_i)\mathsf{f}_i.
+\]
+
+\medskip
+
+\textbf{Definition.} Using the notation of Theorem 2.24, we call the ordered basis 
+$\beta^* = \{\mathsf{f}_1, \mathsf{f}_2, \dots, \mathsf{f}_n\}$ of the dual space $\mathsf{V}^*$ that satisfies 
+$\mathsf{f}_i(x_j) = \delta_{ij}$ for $1 \leq i, j \leq n$ the \textbf{dual basis} of $\beta$.
+
+\medskip
+
+\textbf{Theorem 2.25.} Let $\mathsf{V}$ and $\mathsf{W}$ be finite-dimensional vector spaces over 
+$F$ with ordered bases $\beta$ and $\gamma$, respectively. For any linear transformation 
+$T: \mathsf{V} \to \mathsf{W}$, the mapping 
+$T^{\mathsf{t}} : \mathsf{W}^* \to \mathsf{V}^*$ 
+defined by $T^{\mathsf{t}}(\mathsf{g}) = \mathsf{g}T$ for all $\mathsf{g} \in \mathsf{W}^*$ 
+is a linear transformation with the property that 
+\(
+\left[ T^{\mathsf{t}} \right]^{\beta^*}_{\gamma^*} = \left( \left[ T \right]^\gamma_\beta \right)^{\mathsf{t}}.
+\)
+
 \end{document}
