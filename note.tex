@@ -817,38 +817,73 @@ $\beta'$-coordinates into $\beta$-coordinates. Then
 
 \medskip
 
-\textbf{Definition.} For a vector space $\mathsf{V}$ over a field $F$, we define the 
-\textbf{dual space} of $\mathsf{V}$ to be the vector space $\mathcal{L}(\mathsf{V}, F)$, 
+\textbf{Definition.} For a vector space $\mathsf{V}$ over a field $F$, we define the
+\textbf{dual space} of $\mathsf{V}$ to be the vector space $\mathcal{L}(\mathsf{V}, F)$,
 denoted by $\mathsf{V}^*$.
 
 \medskip
 
-\textbf{Theorem 2.24.} Suppose that $\mathsf{V}$ is a finite-dimensional vector space with 
-ordered basis $\beta = \{x_1, x_2, \dots, x_n\}$. Let $\mathsf{f}_i$ (for $1 \leq i \leq n$) be the 
-$i$th coordinate function with respect to $\beta$ as just defined, and let 
-$\beta^* = \{\mathsf{f}_1, \mathsf{f}_2, \dots, \mathsf{f}_n\}$. 
-Then $\beta^*$ is an ordered basis for the dual space $\mathsf{V}^*$, and for any 
+\textbf{Theorem 2.24.} Suppose that $\mathsf{V}$ is a finite-dimensional vector space with
+ordered basis $\beta = \{x_1, x_2, \dots, x_n\}$. Let $\mathsf{f}_i$ (for $1 \leq i \leq n$) be the
+$i$th coordinate function with respect to $\beta$ as just defined, and let
+$\beta^* = \{\mathsf{f}_1, \mathsf{f}_2, \dots, \mathsf{f}_n\}$.
+Then $\beta^*$ is an ordered basis for the dual space $\mathsf{V}^*$, and for any
 $\mathsf{f} \in \mathsf{V}^*$, we have
 \[
-\mathsf{f} = \sum_{i=1}^{n} \mathsf{f}(x_i)\mathsf{f}_i.
+    \mathsf{f} = \sum_{i=1}^{n} \mathsf{f}(x_i)\mathsf{f}_i.
 \]
 
 \medskip
 
-\textbf{Definition.} Using the notation of Theorem 2.24, we call the ordered basis 
-$\beta^* = \{\mathsf{f}_1, \mathsf{f}_2, \dots, \mathsf{f}_n\}$ of the dual space $\mathsf{V}^*$ that satisfies 
+\textbf{Definition.} Using the notation of Theorem 2.24, we call the ordered basis
+$\beta^* = \{\mathsf{f}_1, \mathsf{f}_2, \dots, \mathsf{f}_n\}$ of the dual space $\mathsf{V}^*$ that satisfies
 $\mathsf{f}_i(x_j) = \delta_{ij}$ for $1 \leq i, j \leq n$ the \textbf{dual basis} of $\beta$.
 
 \medskip
 
-\textbf{Theorem 2.25.} Let $\mathsf{V}$ and $\mathsf{W}$ be finite-dimensional vector spaces over 
-$F$ with ordered bases $\beta$ and $\gamma$, respectively. For any linear transformation 
-$T: \mathsf{V} \to \mathsf{W}$, the mapping 
-$T^{\mathsf{t}} : \mathsf{W}^* \to \mathsf{V}^*$ 
-defined by $T^{\mathsf{t}}(\mathsf{g}) = \mathsf{g}T$ for all $\mathsf{g} \in \mathsf{W}^*$ 
-is a linear transformation with the property that 
+\textbf{Theorem 2.25.} Let $\mathsf{V}$ and $\mathsf{W}$ be finite-dimensional vector spaces over
+$F$ with ordered bases $\beta$ and $\gamma$, respectively. For any linear transformation
+$T: \mathsf{V} \to \mathsf{W}$, the mapping
+$T^{\mathsf{t}} : \mathsf{W}^* \to \mathsf{V}^*$
+defined by $T^{\mathsf{t}}(\mathsf{g}) = \mathsf{g}T$ for all $\mathsf{g} \in \mathsf{W}^*$
+is a linear transformation with the property that
 \(
 \left[ T^{\mathsf{t}} \right]^{\beta^*}_{\gamma^*} = \left( \left[ T \right]^\gamma_\beta \right)^{\mathsf{t}}.
 \)
+
+\textbf{Definition.} (Exponential rule) Let $c = a + ib$ be a complex number with real part $a$ and
+imaginary part $b$. Define
+\[
+    e^c = e^a(\cos b + i \sin b).
+\]
+The special case
+\[
+    e^{ib} = \cos b + i \sin b
+\]
+is called \textbf{Euler's formula}.
+
+\textbf{Theorem 2.28.} The set of all solutions to a homogeneous linear differential equation
+with constant coefficients coincides with the null space of $\mathsf{p}(\mathsf{D})$,
+where $\mathsf{p}(t)$ is the auxiliary polynomial associated with the equation.
+
+\textbf{Corollary.} For any complex number $c$, the null space of the differential operator
+$\mathsf{D} - c\mathsf{I}$ has $\{e^{ct}\}$ as a basis.
+
+\textbf{Theorem 2.32.} For any differential operator $p(\mathsf{D})$ of order $n$,
+the null space of $p(\mathsf{D})$ is an $n$-dimensional subspace of $C^\infty$.
+
+\textbf{Theorem 2.33.} Given $n$ distinct complex numbers $c_1, c_2, \dots, c_n$,
+the set of exponential functions $\{e^{c_1 t}, e^{c_2 t}, \dots, e^{c_n t}\}$ is linearly independent.
+
+\textbf{Theorem 2.34.} Given a homogeneous linear differential equation with 
+constant coefficients and auxiliary polynomial
+\[
+(t - c_1)^{n_1}(t - c_2)^{n_2} \cdots (t - c_k)^{n_k},
+\]
+where $n_1, n_2, \dots, n_k$ are positive integers and $c_1, c_2, \dots, c_k$ are distinct 
+complex numbers, the following set is a basis for the solution space of the equation:
+\[
+\{e^{c_1 t},\ te^{c_1 t},\ \dots,\ t^{n_1 - 1}e^{c_1 t},\ \dots,\ e^{c_k t},\ te^{c_k t},\ \dots,\ t^{n_k - 1}e^{c_k t}\}.
+\]
 
 \end{document}
