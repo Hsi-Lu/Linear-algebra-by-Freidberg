@@ -402,49 +402,6 @@ and let $T: \mathsf{V} \to \mathsf{W}$ be a linear transformation.
 
 \end{proof}
 
-\section{Exercise 2.7.11}
-Prove Theorem 2.34. \textit{Hint:} First verify that the alleged basis lies in the solution space.
-Then verify that this set is linearly independent by mathematical induction on $k$ as follows.
-The case $k = 1$ is the lemma to Theorem 2.34. Assuming that the theorem holds for
-$k - 1$ distinct $c_i$'s, apply the operator $(\mathsf{D} - c_k \mathsf{I})^{n_k}$ to any linear
-combination of the alleged basis that equals $0$.
-
-\begin{quotation}
-    \textbf{Lemma.} For a given complex number $c$ and positive integer $n$, suppose that
-    $(t - c)^n$ is the auxiliary polynomial of a homogeneous linear differential equation
-    with constant coefficients. Then the set
-    \[
-        \beta = \{e^{ct},\ te^{ct},\ \dots,\ t^{n-1}e^{ct}\}
-    \]
-    is a basis for the solution space of the equation.
-\end{quotation}
-
-\begin{proof}
-    Clearly for $k=1$, it's proved through lemma of theorem 2.34
-    Assume the statement is true for $k-1$, let's see the corectness of $k$
-    For a linear combination of $\left\{ t^j e^{c_i t} \mid 0 \leq j < n_i,\ 1 \leq i \leq k \right\}$
-    \[\sum_{i=1}^k \sum_{j=0}^{n_i - 1} a_{ij} t^j e^{c_i t}\]
-    Define the polynomial:
-    \[
-        P_i(t) = a_{i0} + a_{i1}t + \dots + a_{i,n_i - 1}t^{n_i - 1}
-    \]
-    Then the linear combination becomes:
-    \[
-        \sum_{i=1}^k P_i(t) e^{c_i t} = 0
-    \]
-    For $j\neq i$,
-    we can see $(\mathsf{D}-c_j)^n_j(P_i(t) e^{c_i t})$ will becomes $Q_i(t) e^{c_i t}$, which
-    $Q_i$ is another polynomial possibly having lower order.
-
-    Also, we see from theorem 2.34's lemma,
-    $(\mathsf{D}-c_i)^n_j(P_i(t) e^{c_i t})=\0$
-
-    Following the hint, apply the operator $(\mathsf{D} - c_k \mathsf{I})^{n_k}$ to the linear
-    combination, it becomes
-    $\sum_{i=1}^{k-1} Q_i(t) e^{c_i t} = 0$, which by induction hypothesis, $Q_i$ should be
-    zero polynomial, which closes the induction.
-\end{proof}
-
 
 \newpage
 
@@ -875,15 +832,15 @@ the null space of $p(\mathsf{D})$ is an $n$-dimensional subspace of $C^\infty$.
 \textbf{Theorem 2.33.} Given $n$ distinct complex numbers $c_1, c_2, \dots, c_n$,
 the set of exponential functions $\{e^{c_1 t}, e^{c_2 t}, \dots, e^{c_n t}\}$ is linearly independent.
 
-\textbf{Theorem 2.34.} Given a homogeneous linear differential equation with 
+\textbf{Theorem 2.34.} Given a homogeneous linear differential equation with
 constant coefficients and auxiliary polynomial
 \[
-(t - c_1)^{n_1}(t - c_2)^{n_2} \cdots (t - c_k)^{n_k},
+    (t - c_1)^{n_1}(t - c_2)^{n_2} \cdots (t - c_k)^{n_k},
 \]
-where $n_1, n_2, \dots, n_k$ are positive integers and $c_1, c_2, \dots, c_k$ are distinct 
+where $n_1, n_2, \dots, n_k$ are positive integers and $c_1, c_2, \dots, c_k$ are distinct
 complex numbers, the following set is a basis for the solution space of the equation:
 \[
-\{e^{c_1 t},\ te^{c_1 t},\ \dots,\ t^{n_1 - 1}e^{c_1 t},\ \dots,\ e^{c_k t},\ te^{c_k t},\ \dots,\ t^{n_k - 1}e^{c_k t}\}.
+    \{e^{c_1 t},\ te^{c_1 t},\ \dots,\ t^{n_1 - 1}e^{c_1 t},\ \dots,\ e^{c_k t},\ te^{c_k t},\ \dots,\ t^{n_k - 1}e^{c_k t}\}.
 \]
 
 \end{document}
