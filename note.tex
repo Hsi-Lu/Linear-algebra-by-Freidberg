@@ -708,13 +708,13 @@ Then $T^{-1}: \mathsf{W} \to \mathsf{V}$ is linear.
 
 \medskip
 
-\textbf{Definition.}  
-Let $A$ be an $n \times n$ matrix. Then $A$ is \textbf{invertible} if there exists an  
-$n \times n$ matrix $B$ such that $AB = BA = I$.  
+\textbf{Definition.}
+Let $A$ be an $n \times n$ matrix. Then $A$ is \textbf{invertible} if there exists an
+$n \times n$ matrix $B$ such that $AB = BA = I$.
 
-If $A$ is invertible, then the matrix $B$ such that $AB = BA = I$ is unique.  
-(If $C$ were another such matrix, then  
-$C = CI = C(AB) = (CA)B = IB = B$.)  
+If $A$ is invertible, then the matrix $B$ such that $AB = BA = I$ is unique.
+(If $C$ were another such matrix, then
+$C = CI = C(AB) = (CA)B = IB = B$.)
 
 The matrix $B$ is called the \textbf{inverse} of $A$ and is denoted by $A^{-1}$.
 
@@ -857,57 +857,57 @@ complex numbers, the following set is a basis for the solution space of the equa
 
 \medskip
 
-\textbf{Definitions.} Let $A$ be an $m \times n$ matrix. Any one of the following three operations 
+\textbf{Definitions.} Let $A$ be an $m \times n$ matrix. Any one of the following three operations
 on the rows [columns] of $A$ is called an \textbf{elementary row [column] operation}:
 \begin{enumerate}
     \item Interchanging any two rows [columns] of $A$;
     \item Multiplying any row [column] of $A$ by a nonzero scalar;
     \item Adding any scalar multiple of a row [column] of $A$ to another row [column].
 \end{enumerate}
-Any of these three operations is called an \textbf{elementary operation}. Elementary operations 
+Any of these three operations is called an \textbf{elementary operation}. Elementary operations
 are of \textbf{type 1}, \textbf{type 2}, or \textbf{type 3} depending on whether they are obtained by (1), (2), or (3).
 
 \medskip
 
-\textbf{Theorem 3.1.} Let $A \in \mathsf{M}_{m \times n}(F)$, and suppose that $B$ is obtained from 
-$A$ by performing an elementary row [column] operation. Then there exists an 
-$m \times m$ [$n \times n$] elementary matrix $E$ such that $B = EA$ [$B = AE$]. In fact, 
-$E$ is obtained from $I_m$ [$I_n$] by performing the same elementary row [column] 
-operation as that which was performed on $A$ to obtain $B$. Conversely, if $E$ is 
-an elementary $m \times m$ [$n \times n$] matrix, then $EA$ [$AE$] is the matrix obtained 
-from $A$ by performing the same elementary row [column] operation as that 
+\textbf{Theorem 3.1.} Let $A \in \mathsf{M}_{m \times n}(F)$, and suppose that $B$ is obtained from
+$A$ by performing an elementary row [column] operation. Then there exists an
+$m \times m$ [$n \times n$] elementary matrix $E$ such that $B = EA$ [$B = AE$]. In fact,
+$E$ is obtained from $I_m$ [$I_n$] by performing the same elementary row [column]
+operation as that which was performed on $A$ to obtain $B$. Conversely, if $E$ is
+an elementary $m \times m$ [$n \times n$] matrix, then $EA$ [$AE$] is the matrix obtained
+from $A$ by performing the same elementary row [column] operation as that
 which produces $E$ from $I_m$ [$I_n$].
 
 \medskip
 
-\textbf{Theorem 3.2.} Elementary matrices are invertible, and the inverse of an 
+\textbf{Theorem 3.2.} Elementary matrices are invertible, and the inverse of an
 elementary matrix is an elementary matrix of the same type.
 
 \medskip
 
-\textbf{Definition.} If $A \in \mathsf{M}_{m \times n}(F)$, we define the \textbf{rank} of $A$, 
-denoted $\operatorname{rank}(A)$, to be the rank of the linear transformation 
+\textbf{Definition.} If $A \in \mathsf{M}_{m \times n}(F)$, we define the \textbf{rank} of $A$,
+denoted $\operatorname{rank}(A)$, to be the rank of the linear transformation
 $\mathsf{L}_A : F^n \to F^m$.
 
 \medskip
 
-\textbf{Theorem 3.3.} Let $T: \mathsf{V} \to \mathsf{W}$ be a linear transformation between 
-finite-dimensional vector spaces, and let $\beta$ and $\gamma$ be ordered bases for 
+\textbf{Theorem 3.3.} Let $T: \mathsf{V} \to \mathsf{W}$ be a linear transformation between
+finite-dimensional vector spaces, and let $\beta$ and $\gamma$ be ordered bases for
 $\mathsf{V}$ and $\mathsf{W}$, respectively. Then
 \[
-\operatorname{rank}(T) = \operatorname{rank}\left( [T]^\gamma_\beta \right).
+    \operatorname{rank}(T) = \operatorname{rank}\left( [T]^\gamma_\beta \right).
 \]
 
 \medskip
 
-\textbf{Theorem 3.4.} Let $A$ be an $m \times n$ matrix. If $P$ and $Q$ are invertible 
-$m \times m$ and $n \times n$ matrices, respectively, then 
- 
+\textbf{Theorem 3.4.} Let $A$ be an $m \times n$ matrix. If $P$ and $Q$ are invertible
+$m \times m$ and $n \times n$ matrices, respectively, then
+
 (a) $\operatorname{rank}(AQ) = \operatorname{rank}(A)$,
 
 (b) $\operatorname{rank}(PA) = \operatorname{rank}(A)$,
 
-and therefore,  
+and therefore,
 
 (c) $\operatorname{rank}(PAQ) = \operatorname{rank}(A)$.
 
@@ -917,47 +917,47 @@ and therefore,
 
 \medskip
 
-\textbf{Theorem 3.5.} The rank of any matrix equals the maximum number of its 
-linearly independent columns; that is, the rank of a matrix is the dimension 
+\textbf{Theorem 3.5.} The rank of any matrix equals the maximum number of its
+linearly independent columns; that is, the rank of a matrix is the dimension
 of the subspace generated by its columns.
 
 \medskip
 
-\textbf{Theorem 3.6.} Let $A$ be an $m \times n$ matrix of rank $r$. Then $r \leq m$, $r \leq n$, 
-and, by means of a finite number of elementary row and column operations, 
+\textbf{Theorem 3.6.} Let $A$ be an $m \times n$ matrix of rank $r$. Then $r \leq m$, $r \leq n$,
+and, by means of a finite number of elementary row and column operations,
 $A$ can be transformed into the matrix
 \[
-D = 
-\begin{pmatrix}
-I_r & O_1 \\
-O_2 & O_3
-\end{pmatrix},
+    D =
+    \begin{pmatrix}
+        I_r & O_1 \\
+        O_2 & O_3
+    \end{pmatrix},
 \]
-where $O_1$, $O_2$, and $O_3$ are zero matrices. Thus $D_{ii} = 1$ for $i \leq r$ and 
+where $O_1$, $O_2$, and $O_3$ are zero matrices. Thus $D_{ii} = 1$ for $i \leq r$ and
 $D_{ij} = 0$ otherwise.
 
 \medskip
 
-\textbf{Corollary 1.} Let $A$ be an $m \times n$ matrix of rank $r$. Then there exist 
-invertible matrices $B$ and $C$ of sizes $m \times m$ and $n \times n$, respectively, such that 
+\textbf{Corollary 1.} Let $A$ be an $m \times n$ matrix of rank $r$. Then there exist
+invertible matrices $B$ and $C$ of sizes $m \times m$ and $n \times n$, respectively, such that
 $D = BAC$,
 where
 \[
-D = 
-\begin{pmatrix}
-I_r & O_1 \\
-O_2 & O_3
-\end{pmatrix}
+    D =
+    \begin{pmatrix}
+        I_r & O_1 \\
+        O_2 & O_3
+    \end{pmatrix}
 \]
 is the $m \times n$ matrix in which $O_1$, $O_2$, and $O_3$ are zero matrices.
 
 \medskip
 
-\textbf{Corollary 2.} Let $A$ be an $m \times n$ matrix. Then  
+\textbf{Corollary 2.} Let $A$ be an $m \times n$ matrix. Then
 
-(a) $\operatorname{rank}(A^{\mathsf{t}}) = \operatorname{rank}(A)$.  
+(a) $\operatorname{rank}(A^{\mathsf{t}}) = \operatorname{rank}(A)$.
 
-(b) The rank of any matrix equals the maximum number of its linearly independent rows; that is, the rank of a matrix is the dimension of the subspace generated by its rows.  
+(b) The rank of any matrix equals the maximum number of its linearly independent rows; that is, the rank of a matrix is the dimension of the subspace generated by its rows.
 
 (c) The rows and columns of any matrix generate subspaces of the same dimension, numerically equal to the rank of the matrix.
 
@@ -967,15 +967,15 @@ is the $m \times n$ matrix in which $O_1$, $O_2$, and $O_3$ are zero matrices.
 
 \medskip
 
-\textbf{Theorem 3.7.} Let $T: \mathsf{V} \to \mathsf{W}$ and $U: \mathsf{W} \to \mathsf{Z}$ be linear transformations 
-on finite-dimensional vector spaces $\mathsf{V}$, $\mathsf{W}$, and $\mathsf{Z}$, and let $A$ and $B$ be matrices 
-such that the product $AB$ is defined. Then  
+\textbf{Theorem 3.7.} Let $T: \mathsf{V} \to \mathsf{W}$ and $U: \mathsf{W} \to \mathsf{Z}$ be linear transformations
+on finite-dimensional vector spaces $\mathsf{V}$, $\mathsf{W}$, and $\mathsf{Z}$, and let $A$ and $B$ be matrices
+such that the product $AB$ is defined. Then
 
 (a) $\operatorname{rank}(UT) \leq \operatorname{rank}(U)$.
 
-(b) $\operatorname{rank}(UT) \leq \operatorname{rank}(T)$.  
+(b) $\operatorname{rank}(UT) \leq \operatorname{rank}(T)$.
 
-(c) $\operatorname{rank}(AB) \leq \operatorname{rank}(A)$.  
+(c) $\operatorname{rank}(AB) \leq \operatorname{rank}(A)$.
 
 (d) $\operatorname{rank}(AB) \leq \operatorname{rank}(B)$.
 
@@ -983,10 +983,10 @@ such that the product $AB$ is defined. Then
 
 Let $A$ be a $m\times n$ matrix
 
-\textbf{Theorem 3.8.} Let $Ax = 0$ be a homogeneous system of $m$ linear  
-equations in $n$ unknowns over a field $F$. Let $K$ denote the set of all  
-solutions to $Ax = 0$. Then $K = \mathsf{N}(L_A)$; hence $K$ is a subspace  
-of $F^n$ of dimension  
+\textbf{Theorem 3.8.} Let $Ax = 0$ be a homogeneous system of $m$ linear
+equations in $n$ unknowns over a field $F$. Let $K$ denote the set of all
+solutions to $Ax = 0$. Then $K = \mathsf{N}(L_A)$; hence $K$ is a subspace
+of $F^n$ of dimension
 $n - \operatorname{rank}(L_A) = n - \operatorname{rank}(A)$.
 
 \medskip
@@ -995,21 +995,21 @@ $n - \operatorname{rank}(L_A) = n - \operatorname{rank}(A)$.
 
 \medskip
 
-\textbf{Theorem 3.9.} Let $K$ be the solution set of a system of linear equations  
-$Ax = b$, and let $K_H$ be the solution set of the corresponding homogeneous  
-system $Ax = 0$. Then for any solution $s$ to $Ax = b$  
+\textbf{Theorem 3.9.} Let $K$ be the solution set of a system of linear equations
+$Ax = b$, and let $K_H$ be the solution set of the corresponding homogeneous
+system $Ax = 0$. Then for any solution $s$ to $Ax = b$
 \[K = \{s\} + K_H = \{s + k : k \in K_H\}\]
 
 \medskip
 
-\textbf{Theorem 3.10.} Let $Ax = b$ be a system of $n$ linear equations in  
-$n$ unknowns. If $A$ is invertible, then the system has exactly one solution,  
-namely, $A^{-1}b$. Conversely, if the system has exactly one solution, then  
+\textbf{Theorem 3.10.} Let $Ax = b$ be a system of $n$ linear equations in
+$n$ unknowns. If $A$ is invertible, then the system has exactly one solution,
+namely, $A^{-1}b$. Conversely, if the system has exactly one solution, then
 $A$ is invertible.
 
 \medskip
 
-\textbf{Theorem 3.11.} Let $Ax = b$ be a system of linear equations. Then the  
+\textbf{Theorem 3.11.} Let $Ax = b$ be a system of linear equations. Then the
 system is consistent if and only if $\operatorname{rank}(A) = \operatorname{rank}(A|b)$.
 
 \medskip
@@ -1021,42 +1021,158 @@ $(CA)x = Cb$ is equivalent to $Ax = b$.
 
 \medskip
 
-\textbf{Corollary.} Let $Ax = b$ be a system of $m$ linear equations in $n$  
-unknowns. If $(A'|b')$ is obtained from $(A|b)$ by a finite number of  
-elementary row operations, then the system $A'x = b'$ is equivalent to the  
+\textbf{Corollary.} Let $Ax = b$ be a system of $m$ linear equations in $n$
+unknowns. If $(A'|b')$ is obtained from $(A|b)$ by a finite number of
+elementary row operations, then the system $A'x = b'$ is equivalent to the
 original system.
 
 \medskip
 
-\textbf{Theorem 3.15.} Let $Ax = b$ be a system of $r$ nonzero equations in $n$  
-unknowns. Suppose that $\operatorname{rank}(A) = \operatorname{rank}(A|b)$ and that  
-$(A|b)$ is in reduced row echelon form. Then  
+\textbf{Theorem 3.15.} Let $Ax = b$ be a system of $r$ nonzero equations in $n$
+unknowns. Suppose that $\operatorname{rank}(A) = \operatorname{rank}(A|b)$ and that
+$(A|b)$ is in reduced row echelon form. Then
 
-(a) $\operatorname{rank}(A) = r$.  
+(a) $\operatorname{rank}(A) = r$.
 
-(b) If the general solution obtained by the procedure above is of the form  
-$s = s_0 + t_1u_1 + t_2u_2 + \cdots + t_{n-r}u_{n-r}$,  
-then $\{u_1, u_2, \ldots, u_{n-r}\}$ is a basis for the solution set of the  
-corresponding homogeneous system, and $s_0$ is a solution to the original  
+(b) If the general solution obtained by the procedure above is of the form
+$s = s_0 + t_1u_1 + t_2u_2 + \cdots + t_{n-r}u_{n-r}$,
+then $\{u_1, u_2, \ldots, u_{n-r}\}$ is a basis for the solution set of the
+corresponding homogeneous system, and $s_0$ is a solution to the original
 system.
 
 \medskip
 
-\textbf{Theorem 3.16.} Let $A$ be an $m \times n$ matrix of rank $r$, where $r > 0$,  
-and let $B$ be the reduced row echelon form of $A$. Then  
+\textbf{Theorem 3.16.} Let $A$ be an $m \times n$ matrix of rank $r$, where $r > 0$,
+and let $B$ be the reduced row echelon form of $A$. Then
 
-(a) The number of nonzero rows in $B$ is $r$.  
+(a) The number of nonzero rows in $B$ is $r$.
 
-(b) For each $i = 1, 2, \ldots, r$, there is a column $b_{j_i}$ of $B$ such that  
-$b_{j_i} = e_i$.  
+(b) For each $i = 1, 2, \ldots, r$, there is a column $b_{j_i}$ of $B$ such that
+$b_{j_i} = e_i$.
 
-(c) The columns of $A$ numbered $j_1, j_2, \ldots, j_r$ are linearly independent.  
+(c) The columns of $A$ numbered $j_1, j_2, \ldots, j_r$ are linearly independent.
 
-(d) For each $k = 1, 2, \ldots, n$, if column $k$ of $B$ is  
-$d_1 e_1 + d_2 e_2 + \cdots + d_r e_r$, then column $k$ of $A$ is  
+(d) For each $k = 1, 2, \ldots, n$, if column $k$ of $B$ is
+$d_1 e_1 + d_2 e_2 + \cdots + d_r e_r$, then column $k$ of $A$ is
 $d_1 a_{j_1} + d_2 a_{j_2} + \cdots + d_r a_{j_r}$.
 
 \medskip
 
 \textbf{Corollary.} The reduced row echelon form of a matrix is unique.
+
+\textbf{Theorem 4.1.} The function $\det: M_{2 \times 2}(F) \to F$ is a linear
+function of each row of a $2 \times 2$ matrix when the other row is held fixed.
+That is, if $u$, $v$, and $w$ are in $F^2$ and $k$ is a scalar, then
+\[
+    \det\begin{pmatrix} u + kv \\ w \end{pmatrix} =
+    \det\begin{pmatrix} u \\ w \end{pmatrix} +
+    k \det\begin{pmatrix} v \\ w \end{pmatrix}
+\]
+and
+\[
+    \det\begin{pmatrix} w \\ u + kv \end{pmatrix} =
+    \det\begin{pmatrix} w \\ u \end{pmatrix} +
+    k \det\begin{pmatrix} w \\ v \end{pmatrix}.
+\]
+
+\medskip
+
+\textbf{Theorem 4.2.} Let $A \in M_{2 \times 2}(F)$. Then the determinant of $A$
+is nonzero if and only if $A$ is invertible. Moreover, if $A$ is invertible, then
+\[
+    A^{-1} = \frac{1}{\det(A)}
+    \begin{pmatrix}
+        A_{22}  & -A_{12} \\
+        -A_{21} & A_{11}
+    \end{pmatrix}.
+\]
+
+\medskip
+
+\textbf{Theorem 4.3.} The determinant of an $n \times n$ matrix is a linear
+function of each row when the remaining rows are held fixed. That is,
+for $1 \leq r \leq n$, we have
+\[
+    \det\begin{pmatrix}
+        \vdots  \\
+        a_1     \\
+        a_{r-1} \\
+        u + kv  \\
+        a_{r+1} \\
+        \vdots  \\
+        a_n
+    \end{pmatrix} =
+    \det\begin{pmatrix}
+        \vdots  \\
+        a_1     \\
+        a_{r-1} \\
+        u       \\
+        a_{r+1} \\
+        \vdots  \\
+        a_n
+    \end{pmatrix} +
+    k \det\begin{pmatrix}
+        \vdots  \\
+        a_1     \\
+        a_{r-1} \\
+        v       \\
+        a_{r+1} \\
+        \vdots  \\
+        a_n
+    \end{pmatrix}
+\]
+whenever $k$ is a scalar and $u$, $v$, and each $a_i$ are row vectors in $F^n$.
+
+\medskip
+
+\textbf{Corollary.} If $A \in M_{n \times n}(F)$ has a row consisting entirely of
+zeros, then $\det(A) = 0$.
+
+\medskip
+
+\textbf{Theorem 4.4.} The determinant of a square matrix can be evaluated by
+cofactor expansion along any row. That is, if $A \in M_{n \times n}(F)$, then
+for any integer $i$ ($1 \leq i \leq n$),
+\[
+    \det(A) = \sum_{j=1}^{n} (-1)^{i+j} A_{ij} \cdot \det(\widetilde{A}_{ij}),
+\]
+where $\widetilde{A}_{ij}$ is the $(n-1) \times (n-1)$ matrix obtained by deleting
+row $i$ and column $j$ from $A$.
+
+\medskip
+
+\textbf{Corollary.} If $A \in M_{n \times n}(F)$ has two identical rows, then
+$\det(A) = 0$.
+
+\medskip
+
+\textbf{Theorem 4.5.} If $A \in M_{n \times n}(F)$ and $B$ is a matrix obtained
+from $A$ by interchanging any two rows of $A$, then $\det(B) = -\det(A)$.
+
+\medskip
+
+\textbf{Theorem 4.6.} Let $A \in M_{n \times n}(F)$, and let $B$ be a matrix
+obtained by adding a multiple of one row of $A$ to another row of $A$.
+Then $\det(B) = \det(A)$.
+
+\medskip
+
+\textbf{Corollary.} If $A \in M_{n \times n}(F)$ has rank less than $n$, then
+$\det(A) = 0$.
+
+\medskip
+
+\begin{quotation}
+    The following rules summarize the effect of an elementary row operation
+    on the determinant of a matrix $A \in M_{n \times n}(F)$.
+    \begin{itemize}
+        \item[(a)] If $B$ is a matrix obtained by interchanging any two rows of $A$,
+              then $\det(B) = -\det(A)$.
+        \item[(b)] If $B$ is a matrix obtained by multiplying a row of $A$ by a
+              nonzero scalar $k$, then $\det(B) = k \det(A)$.
+        \item[(c)] If $B$ is a matrix obtained by adding a multiple of one row of $A$
+              to another row of $A$, then $\det(B) = \det(A)$.
+    \end{itemize}
+\end{quotation}
+
 \end{document}
